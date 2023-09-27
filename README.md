@@ -3,10 +3,12 @@ SnapGallery
 Step 1: clone repo
 Step 2: composer install
 Step 3: npm install
-Step 4: setup db and edit in .env file (copy .env from .env.example)
-Step 5: php artisan migrate
-Step 6: php artisan storage:link
-Step 7: php artisan serve
+Step 4: npm run dev
+Step 5: setup db and edit in .env file (copy .env from .env.example)
+Step 6: php artisan migrate
+Step 7: php artisan storage:link
+Step 8: php artisan serve
+
 
 
 Project Description:
