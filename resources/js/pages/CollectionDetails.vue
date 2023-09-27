@@ -1,6 +1,6 @@
 <template>
     <div class="2xl:mx-auto 2xl:max-w-7xl py-10">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between mb-4">
             <div class="flex justify-start items-center gap-5">
                 <router-link to="/" class="px-8 py-2 flex justify-start items-center border border-gray-600 rounded-full gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -8,7 +8,7 @@
                     </svg>
                     <span>Back</span>
                 </router-link>
-                <h2 class="text-2xl font-semibold mb-4">{{ $t('collection_details') }}</h2>
+                <h2 class="text-2xl font-semibold">{{ $t('collection_details') }}</h2>
             </div>
             <button @click="openModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ $t('upload_photo') }}</button>
         </div>
