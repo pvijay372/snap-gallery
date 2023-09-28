@@ -73,6 +73,9 @@ export default {
         },
         authenticate() {
             localStorage.setItem('ownershipToken', this.email);
+            this.closeModal();
+            
+            this.$emit('open-edit-modal', this.email);
         },
         cleanErrors() {
             this.errors = new Errors();

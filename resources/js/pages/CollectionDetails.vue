@@ -14,7 +14,7 @@
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div v-for="image in images" :key="image.id" class="p-4 bg-white shadow-lg rounded-lg hover:shadow-xl transition duration-300 ease-in-out cursor-pointer">
+            <div v-for="image in images" :key="image.id" @click="showImage(image.path)" class="p-4 bg-white shadow-lg rounded-lg hover:shadow-xl transition duration-300 ease-in-out cursor-pointer">
                 <div class="h-40 w-full bg-gray-200 rounded-lg mb-4">
                     <img :src="'/storage/' + image.path" alt="Image" class="w-full h-full object-cover object-center">
                 </div>
@@ -58,8 +58,14 @@ export default {
                     console.error('Error fetching images:', error);
                 });
         },
+
         openModal() {
             this.$refs.uploadImageModalRef.openModal();
+        },  
+
+        showImage(path) {
+            const imageURL = '/storage/' + path;
+            window.open(imageURL, '_blank');
         },  
     },
 }
